@@ -11,7 +11,9 @@ class puppet_infrastructure{
   class{'puppet_infrastructure::puppetserver_master':}
   class{'puppet_infrastructure::config':}
   class{'puppet_infrastructure::puppet_mgmt_scripts':}
-  class{'puppet_infrastructure::puppetdb_server':}
+  class{'puppet_infrastructure::puppetdb_server':
+    require => Class['puppetserver']
+  }
   class{'puppet_infrastructure::puppetserver_connect_puppetdb':}
   class{'puppet_infrastructure::puppetboard_server':}
   class{'puppet_infrastructure::puppetexplorer_vhost':}
