@@ -22,7 +22,7 @@ class puppet_infrastructure::puppetboard_server {
   }
   # Apache Vhost for PuppetBoard Web UI
   class { 'puppetboard::apache::vhost':
-    vhost_name => $::fqdn,
+    vhost_name => "puppetboard.${::domain}",
     port       => 80,
   }
 

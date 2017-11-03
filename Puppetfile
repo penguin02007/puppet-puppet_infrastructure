@@ -20,7 +20,10 @@ mod "puppetlabs/vcsrepo", :latest
 mod "gentoo/portage", :latest
 mod "herculesteam/augeasproviders_core", :latest
 mod "jfryman/selinux", :latest
+# Using my branch until my pull request gets merged
 mod "spotify/puppetexplorer", :latest
+  :git    => 'https://github.com/ppouliot/puppet-puppetexplorer',
+  :branch => 'master'
 mod "stankevich/python", :latest
 mod "thias/sysctl", :latest
 
