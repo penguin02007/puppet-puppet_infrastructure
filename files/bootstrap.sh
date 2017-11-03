@@ -23,4 +23,4 @@ echo "### INSTALLING R10K and Hierra-eyaml ###"
 gem install r10k hiera-eyaml
 cd /etc/puppetlabs/code && wget https://raw.githubusercontent.com/ppouliot/puppet-puppet_infrastructure/master/Puppetfile
 /usr/local/bin/r10k puppetfile install --verbose DEBUG2
-/opt/puppet/bin/puppet apply --debug -trace --verbose --modulepath=/etc/puppetlabs/code/modules /etc/puppetlabs/code/manifests
+/opt/puppet/bin/puppet apply --debug -trace --verbose --modulepath=/etc/puppetlabs/code/modules /etc/puppetlabs/code/modules/puppet_infrasturcture/examples/init.pp
