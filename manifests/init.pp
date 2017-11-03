@@ -18,7 +18,7 @@ class puppet_infrastructure{
   contain 'puppet_infrastructure::puppet_mgmt_scripts'
   contain 'puppet_infrastructure::os_gems'
   contain 'puppet_infrastructure::puppetboard_server'
-  Class['puppet_infrstructure::puppetserver_master']
+  Class['puppet_infrastructure::puppetserver_master']
   -> Class['puppet_infrastructure::config']
     -> Class['puppet_infrastructure::puppetdb_server']
       -> Class['puppet_infrastructure::puppet_mgmt_scripts']
