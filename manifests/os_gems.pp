@@ -31,9 +31,9 @@ class puppet_infrastructure::os_gems {
     provider => gem,
   }
 
-  package{"CFPr::opertyList.${::operatingsystem}":
+  package{"CFPropertyList.${::operatingsystem}":
     ensure   => latest,
-    name     => 'CFPr::opertyList',
+    name     => 'CFPropertyList',
     provider => gem,
   }
   package{"msgpack.${::operatingsystem}":
