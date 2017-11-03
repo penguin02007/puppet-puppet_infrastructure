@@ -8,7 +8,7 @@
 #   include puppet_infrastructure::puppetdb_server
 class puppet_infrastructure::puppetdb_server {
   class { 'puppetdb':
-    disable_ssl        => true,    
+#    disable_ssl        => true,    
 #   ssl_set_cert_paths => true,
 #   ssl_deploy_certs   => true,
     listen_address     => '0.0.0.0',

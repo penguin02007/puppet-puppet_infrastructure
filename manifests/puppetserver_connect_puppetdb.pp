@@ -7,9 +7,7 @@
 # @example
 #   include puppet_infrastructure::puppetserver_connect_puppetdb
 class puppet_infrastructure::puppetserver_connect_puppetdb {
-  class { 'puppetdb::master::config':
-    puppetdb_disable_ssl => true,
-  }
+  class { 'puppetdb::master::config': }
 ->ini_setting{'reports-puppetdb':
     ensure  => present,
     path    => '/etc/puppetlabs/puppet/puppet.conf',
