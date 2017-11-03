@@ -9,11 +9,13 @@
 class puppet_infrastructure{
 
   class{'puppet_infrastructure::puppetserver_master':}
+  class{'puppet_infrastructure::config':}
   class{'puppet_infrastructure::puppetdb_server':}
   class{'puppet_infrastructure::puppet_mgmt_scripts':}
   class{'puppet_infrastructure::puppetboard_server':}
 
   contain 'puppet_infrastructure::puppetserver_master'
+  contain 'puppet_infrastructure::config'
   contain 'puppet_infrastructure::puppetdb_server'
   contain 'puppet_infrastructure::puppet_mgmt_scripts'
   contain 'puppet_infrastructure::os_gems'
