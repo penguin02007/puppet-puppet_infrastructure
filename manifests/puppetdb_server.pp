@@ -7,10 +7,10 @@
 # @example
 #   include puppet_infrastructure::puppetdb_server
 class puppet_infrastructure::puppetdb_server {
-
   class { 'puppetdb':
-    ssl_set_cert_paths => true,
-    ssl_deploy_certs   => true,
+    disable_ssl        => true,    
+#   ssl_set_cert_paths => true,
+#   ssl_deploy_certs   => true,
     listen_address     => '0.0.0.0',
     node_ttl           => '2d',
     node_purge_ttl     => '3d',
