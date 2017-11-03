@@ -19,6 +19,7 @@ mod "puppetlabs/vcsrepo", :latest
 
 mod "gentoo/portage", :latest
 mod "herculesteam/augeasproviders_core", :latest
+mod "jfryman/selinux", :latest
 mod "spotify/puppetexplorer", :latest
 mod "stankevich/python", :latest
 mod "thias/sysctl", :latest
