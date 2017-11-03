@@ -8,7 +8,12 @@ mod "puppetlabs/git", :latest
 mod "puppetlabs/gcc", :latest
 mod "puppetlabs/inifile", :latest
 mod "puppetlabs/inventory", :latest
-mod "puppetlabs/postgresql", :latest
+#mod "puppetlabs/postgresql", :latest
+mod "puppetlabs/postgresql",
+  :git => 'https://github.com/puppetlabs/puppetlabs-postgresql',
+  :branch => 'master'
+
+
 mod "puppetlabs/puppet_agent", :latest
 mod "puppetlabs/puppetserver_gem", :latest
 mod "puppetlabs/puppetdb", :latest
