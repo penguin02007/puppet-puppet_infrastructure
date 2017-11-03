@@ -20,10 +20,10 @@ class puppet_infrastructure{
   contain 'puppet_infrastructure::config'
   contain 'puppet_infrastructure::puppetdb_server'
   contain 'puppet_infrastructure::puppet_mgmt_scripts'
-  contain 'puppet_infrastructure::os_gems'
-  contain 'puppet_infrastructure::puppetboard_server'
-  contain 'puppet_infrastructure::puppetserver_connect_puppetdb'
-  contain 'puppet_infrastructure::puppetexplorer_vhost'
+#  contain 'puppet_infrastructure::os_gems'
+#  contain 'puppet_infrastructure::puppetboard_server'
+#  contain 'puppet_infrastructure::puppetserver_connect_puppetdb'
+#  contain 'puppet_infrastructure::puppetexplorer_vhost'
 
   Class['puppet_infrastructure::puppetserver_master']
   -> Class['puppet_infrastructure::config']
