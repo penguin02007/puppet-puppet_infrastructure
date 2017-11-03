@@ -5,8 +5,8 @@
   "summary": "Build PuppetServer/PuppetDB infrastructure for Specific Use Cases",
   "license": "Apache-2.0",
   "source": "https://github.com/ppouliot/puppet-puppet_infrastructure",
-  "project_page": " https://github.com/ppouliot/puppet-puppet_infrastructure",
-  "issues_url": " https://github.com/ppouliot/puppet-puppet_infrastructure/issues",
+  "project_page": "https://github.com/ppouliot/puppet-puppet_infrastructure",
+  "issues_url": "https://github.com/ppouliot/puppet-puppet_infrastructure/issues",
   "dependencies": [
 
   ],

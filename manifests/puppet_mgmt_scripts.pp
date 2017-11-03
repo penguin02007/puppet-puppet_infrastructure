@@ -7,33 +7,33 @@
 # @example
 #   include puppet_infrastructure::puppet_mgmt_scripts
 class puppet_infrastructure::puppet_mgmt_scripts {
- file{'/root/bin':
+  file{'/root/bin':
     ensure => directory,
     owner  => 'root',
     group  => 'root',
     mode   => '0770',
-  } ->
-  file{'/root/bin/stop_puppetdb_services.sh':
-    ensure => file,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0770',
+  }
+->file{'/root/bin/stop_puppetdb_services.sh':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0770',
     content => "# This Script is Managed by in the
-#Puppet Node Definition for ${fqdn}
+#Puppet Node Definition for ${::fqdn}
 #!/bin/bash
 puppet resource service puppet ensure=stopped
 puppet resource service puppetdb ensure=stopped
 puppet resource service postgresql ensure=stopped
 puppet resource service mcollective ensure=stopped
 ",
-  } ->
-  file{'/root/bin/start_puppetdb_services.sh':
-    ensure => file,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0770',
+  }
+->file{'/root/bin/start_puppetdb_services.sh':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0770',
     content => "# This Script is Managed by in the
-#Puppet Node Definition for ${fqdn}
+#Puppet Node Definition for ${::fqdn}
 #!/bin/bash
 puppet resource service puppet ensure=running
 puppet resource service puppetdb ensure=running

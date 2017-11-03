@@ -12,7 +12,7 @@ class puppet_infrastructure::puppetboard_server {
   class { 'apache': }
   class { 'apache::mod::wsgi': }
 
- # PuppetBoard Web UI
+  # PuppetBoard Web UI
   class { 'puppetboard':
     manage_git        => true,
     manage_virtualenv => true,

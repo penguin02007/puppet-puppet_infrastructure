@@ -9,44 +9,44 @@
 class puppet_infrastructure::os_gems {
 
   # OS Provided Gems
-  package{"r10k.${operatingsystem}":
+  package{"r10k.${::operatingsystem}":
+    ensure   => latest,
     name     => 'r10k',
-    ensure   => latest,
     provider => gem,
   }
 
-  package{"rspec-puppet.${operatingsystem}":
+  package{"rspec-puppet.${::operatingsystem}":
+    ensure   => latest,
     name     => 'rspec-puppet',
-    ensure   => latest,
     provider => gem,
   }
-  package{"hiera-eyaml.${operatingsystem}":
+  package{"hiera-eyaml.${::operatingsystem}":
+    ensure   => latest,
     name     => 'hiera-eyaml',
-    ensure   => latest,
     provider => gem,
   }
-  package{"puppet-blacksmith.${operatingsystem}":
-    name     => 'puppet-blacksmith',
+  package{"puppet-blacksmith.${::operatingsystem}":
     ensure   => latest,
+    name     => 'puppet-blacksmith',
     provider => gem,
   }
 
-  package{"CFPropertyList.${operatingsystem}":
-    name     => 'CFPropertyList',
+  package{"CFPr::opertyList.${::operatingsystem}":
     ensure   => latest,
+    name     => 'CFPr::opertyList',
     provider => gem,
   }
-  package{"msgpack.${operatingsystem}":
-    name     => 'msgpack',
+  package{"msgpack.${::operatingsystem}":
     ensure   => latest,
+    name     => 'msgpack',
     provider => gem,
   }
 
   # octocatalog-diff
   # https://githubengineering.com/octocatalog-diff-github-s-puppet-development-and-testing-tool/
   package{'octocatalog-diff-local':
-    name     => 'octocatalog-diff',
     ensure   => latest,
+    name     => 'octocatalog-diff',
     provider => gem,
     require  => Package['ruby-dev','cmake','pkg-config'],
   }
