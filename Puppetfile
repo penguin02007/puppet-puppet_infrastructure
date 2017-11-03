@@ -19,3 +19,6 @@ mod "puppet/r10k", :latest
 mod "puppet/puppetserver", 
   :git    => 'https://github.com/voxpupuli/puppet-puppetserver',
   :branch => 'master'
+mod "ppouliot/puppet_infrastructure", 
+  :git    => 'https://github.com/ppouliot/puppet-puppet_infrastructure',
+  :branch => 'master'
