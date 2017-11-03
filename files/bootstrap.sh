@@ -1,4 +1,7 @@
 #!/bin/bash
+release_name=`lsb_release -c | awk '{print $2}'`
+release_number=`lsb_release -r | awk '{print $2}'| tr -d '.'`
+
 echo '*** Attempting to install the puppet5 release apt repository from apt.puppet.com first ***'
 puppet_package='puppet-agent'; wget http://apt.puppet.com/puppet5-release-$release_name.deb; dpkg -i puppet5-release-$release_name.deb
 if [ $? $test -eq 1 ]; then
